@@ -19,8 +19,12 @@
         <td>{{ $student->course }}</td>
         <td>{{ $student->marks }}</td>
         <td>
-        <a href="">Edit</a>
-        <a href="">Delete</a>
+        <a href="/edit/{{ $student->id }}">Edit</a>
+        <form action="/delete/{{ $student->id }}" method="POST" >
+            @csrf
+            @method('DELETE')
+            <button onclick="return confirm('Are you sure?')">Delete</button>
+        </form>
         </td>
         </tr>
         @endforeach

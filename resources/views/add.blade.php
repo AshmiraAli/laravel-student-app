@@ -30,7 +30,10 @@
     Name: <input type="text" name="student_name"><br><br>
     Course: <input type="text" name="student_course"><br><br>
     Marks: <input type="number" name="student_marks"><br><br>
-    <button type="submit">Save</button>
+    <button type="submit">Save</button><br><br>
+    <!-- <a href="/">return to student info....</a>   insted of use a Route mtd -->
+    <a href="{{ route('students.index') }}">return to student info....</a> 
+      <!-- need to set route for this -->
 </form>
 </body>
 </html>
